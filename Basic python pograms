@@ -327,9 +327,27 @@ power(2,1000)
 *****OUTPUT*****
 sum of digits: 1366
 
+Question 19:
+Write a Python program to create a histogram from a given list of integers.
 
+Solution:
+def histogram(list):
+    for i in list:
+        res = ''
+        times = i
+        while( times > 0 ):
+            res += '@'
+            times = times-1
+        print(res)
+histogram([1,2,3,4,5,6,7])
 
-
-
+*****OUTPUT*****
+@
+@@
+@@@
+@@@@
+@@@@@
+@@@@@@
+@@@@@@@
 
 
