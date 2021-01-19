@@ -250,8 +250,86 @@ for i in range(1,21):
 
 *****OUTPUT*****
 
-
+Question 15:
+The sum of the squares of the first ten natural numbers is, 1^2 + 2^2 + ... + 10^2 = 385 The square of the sum of the first ten natural numbers is, 
+(1 + 2 + ... + 10)^2 = 55^2 = 3025 The difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640. 
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum...
  
+Solution:
+class First():
+    def sosq(self):
+        sum_of_sq=0
+        for i in range(1,101):
+            sum_of_sq += i*i
+        return(sum_of_sq)
+    def sqos(self):
+        sq_of_sum=0
+        for i in range(1,101):
+            sq_of_sum += i
+        sq_of_sum = sq_of_sum ** 2
+        return(sq_of_sum)
+obj1=First()
+print("Difference is:", obj1.sqos() - obj1.sosq())
+
+*****OUTPUT*****
+Difference is: 25164150
+
+Question 16:
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13. What is the 10001 prime number?
+
+Solution:
+def main(num_to_find):
+    x=3
+    list_of_primes=[2]
+    while(len(list_of_primes) < num_to_find):
+        if all(x % i for i in list_of_primes):
+            list_of_primes.append(x)
+        x += 1
+#     print(list_of_primes)
+    print("10001 prime number is:", list_of_primes[-1])
+# main(6)
+main(10001)
+
+*****OUTPUT*****
+10001 prime number is: 104743
+
+Question 17:
+A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a^2 + b^2 = c^2. For example, 32 + 42 = 9 + 16 = 25 = 52. 
+There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc.
+
+Solution:
+def product(sum):
+    for a in range(1,sum):
+        for b in range(1,sum):
+            c = sum - a - b
+            if a**2 + b**2 == c**2:
+                print( a, b, c)
+                return a * b * c
+            else:
+                pass
+    print(" no triplet:")
+product(1000)
+
+*****OUTPUT*****
+200 375 425
+31875000
+
+Question 18:
+2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26. What is the sum of the digits of the number 2^1000?
+
+Solution:
+    c=a**b
+#     print(c)
+    res = [int(x) for x in str(c)]
+    print(res,"\nsum of digits:",sum(res))
+power(2,1000)
+
+*****OUTPUT*****
+sum of digits: 1366
+
+
+
+
 
 
 
