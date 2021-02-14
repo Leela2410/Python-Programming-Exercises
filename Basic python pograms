@@ -134,6 +134,7 @@ Solution:
 var1=[1,2,3,4,5]
 var2=[10,12,14,16,18,20]
 res=[var1[i]+var2[j]  for i in range(5) for j in range(6) if(var1[i]+var2[j])%3==0]
+# res=[var1[i]+var2[j] for i in range(len(var1)) for j in range(len(var2)) if(var1[i]+var2[j])%3==0]
 print(res)
 
 *****OUTPUT*****
